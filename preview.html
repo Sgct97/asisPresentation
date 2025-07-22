@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentation Preview - All Slides</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .preview-header {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #00335D;
+        }
+        
+        .preview-header h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        
+        .preview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .slide-preview {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0, 51, 93, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        
+        .slide-preview:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 32px rgba(0, 51, 93, 0.15);
+        }
+        
+        .slide-number-badge {
+            background: #1FC77E;
+            color: #00335D;
+            padding: 8px 16px;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 0.1em;
+        }
+        
+        .slide-iframe {
+            width: 100%;
+            height: 225px; /* 16:9 aspect ratio */
+            border: none;
+            display: block;
+        }
+        
+        .slide-info {
+            padding: 20px;
+            background: #fafafa;
+            border-top: 1px solid #e0e0e0;
+        }
+        
+        .slide-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 18px;
+            color: #00335D;
+            margin-bottom: 8px;
+        }
+        
+        .slide-description {
+            color: #6E7A8A;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        .launch-btn {
+            display: inline-block;
+            margin: 40px auto;
+            padding: 16px 40px;
+            background: #1FC77E;
+            color: #00335D;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 18px;
+            text-align: center;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        
+        .launch-btn:hover {
+            background: #00335D;
+            color: #1FC77E;
+            transform: scale(1.05);
+        }
+        
+        .preview-footer {
+            text-align: center;
+            margin-top: 60px;
+            color: #6E7A8A;
+        }
+    </style>
+</head>
+<body>
+    <div class="preview-header">
+        <h1>AI IN PHYSICAL SECURITY 2025: FRIEND & FOE</h1>
+        <p>ASIS Tampa Bay Chapter Presentation - First 5 Slides Preview</p>
+    </div>
+    
+    <div class="preview-grid">
+        <div class="slide-preview">
+            <div class="slide-number-badge">SLIDE 1</div>
+            <iframe src="index.html#slide-1" class="slide-iframe"></iframe>
+            <div class="slide-info">
+                <h3 class="slide-title">Title Slide</h3>
+                <p class="slide-description">Opening slide with animated brand wave, establishing the premium tone and EarlyBird AI branding.</p>
+            </div>
+        </div>
+        
+        <div class="slide-preview">
+            <div class="slide-number-badge">SLIDE 2</div>
+            <iframe src="index.html#slide-2" class="slide-iframe"></iframe>
+            <div class="slide-info">
+                <h3 class="slide-title">The $35M Wake-Up Call</h3>
+                <p class="slide-description">Hook story about the Hong Kong deepfake incident with animated impact visualization.</p>
+            </div>
+        </div>
+        
+        <div class="slide-preview">
+            <div class="slide-number-badge">SLIDE 3</div>
+            <iframe src="index.html#slide-3" class="slide-iframe"></iframe>
+            <div class="slide-info">
+                <h3 class="slide-title">AI Decoded: The Hierarchy</h3>
+                <p class="slide-description">Interactive pyramid showing ML, Deep Learning, and Generative AI layers with hover effects.</p>
+            </div>
+        </div>
+        
+        <div class="slide-preview">
+            <div class="slide-number-badge">SLIDE 4</div>
+            <iframe src="index.html#slide-4" class="slide-iframe"></iframe>
+            <div class="slide-info">
+                <h3 class="slide-title">AI or Sci-Fi Quiz</h3>
+                <p class="slide-description">Interactive quiz with clickable cards that reveal whether statements are AI reality or science fiction.</p>
+            </div>
+        </div>
+        
+        <div class="slide-preview">
+            <div class="slide-number-badge">SLIDE 5</div>
+            <iframe src="index.html#slide-5" class="slide-iframe"></iframe>
+            <div class="slide-info">
+                <h3 class="slide-title">Everyday AI Wins</h3>
+                <p class="slide-description">Success metrics and Tampa case study featuring Westshore District's 43% reduction in false alarms.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div style="text-align: center;">
+        <a href="index.html" class="launch-btn">Launch Full Presentation</a>
+    </div>
+    
+    <div class="preview-footer">
+        <p>Ultra-Premium Enterprise Design • EarlyBird AI Brand Guidelines • WCAG 2.1 AA Compliant</p>
+    </div>
+    
+    <script>
+        // Disable interactions in iframes
+        document.querySelectorAll('.slide-iframe').forEach(iframe => {
+            iframe.addEventListener('load', function() {
+                try {
+                    const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+                    iframeDoc.body.style.pointerEvents = 'none';
+                } catch(e) {
+                    // Cross-origin restriction, ignore
+                }
+            });
+        });
+    </script>
+</body>
+</html> 
