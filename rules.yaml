@@ -1,0 +1,107 @@
+# PRESENTATION DESIGN RULES - MANDATORY COMPLIANCE
+# These rules are based on actual mistakes made and MUST be followed
+
+presentation_rules:
+  
+  # CRITICAL SPACE UTILIZATION RULES
+  space_usage:
+    - ALWAYS use the full available screen space (100vh height, full width)
+    - NEVER make elements tiny and centered with empty space around them
+    - NEVER create layouts that waste 50%+ of the available space
+    - USE grid layouts or flexbox to distribute content across the entire viewport
+    - SCALE elements UP to fill space, not DOWN to create wasted space
+    - Minimum font sizes: headers 24px+, body text 16px+, small text 12px+
+    - Elements should span multiple columns/rows when appropriate
+
+  # VIEWPORT FITTING RULES  
+  viewport_compliance:
+    - ALL content MUST fit within 100vh without scrolling
+    - NEVER create elements that extend beyond the viewport boundaries
+    - Test element sizes: if total content height > 100vh, reduce padding/margins/font sizes
+    - Use overflow: hidden and test all content visibility
+    - Grid/flex containers must have proper height constraints
+    - NEVER use min-height without max-height constraints
+
+  # CONTENT REMOVAL PROTOCOL
+  content_management:
+    - BEFORE removing ANY content from slides, ALWAYS update speaker-notes.md first
+    - Include ALL removed details, examples, statistics, and explanations in speaker notes
+    - Add visual cues in speaker notes ("Point to left section", "Reference slide visual")
+    - NEVER delete information without preserving it for the speaker
+    - Maintain technical depth in notes even when simplifying slide visuals
+
+  # DESIGN TRANSFORMATION RULES
+  visual_redesign:
+    - When transforming slides, create COHESIVE layouts, not scattered elements
+    - Use grid systems to create unified, flowing designs
+    - NEVER just remove content - redesign the entire layout structure
+    - Elements should relate to each other visually and spatially
+    - Maintain premium aesthetic while ensuring functionality
+
+  # INTERPRETATION RULES
+  user_requests:
+    - "Make the next 5 slides" means ADD slides 9-13, NOT replace existing slides 5-8
+    - "Fix spacing" means adjust the specific problematic elements, NOT redesign everything
+    - "Use all the space" means expand elements to fill viewport, NOT shrink them
+    - "Make it readable" means increase font sizes appropriately, NOT distort layouts
+    - When user shows screenshots of problems, address ONLY those specific issues
+
+  # ITERATIVE FIXING RULES
+  problem_solving:
+    - NEVER make changes that affect elements not mentioned in the user's complaint
+    - When fixing cutoff issues: reduce padding/margins incrementally (2-5px at a time)
+    - When fixing font size issues: increase in small increments (1-2px at a time)  
+    - STOP after addressing the specific problem - don't "improve" other areas
+    - If a fix doesn't work after 2 attempts, try a different approach entirely
+
+  # CSS DEBUGGING RULES
+  technical_fixes:
+    - For cutoff content: first check padding/margins, then font sizes, then container heights
+    - NEVER increase element sizes when they already don't fit
+    - Use flexbox justify-content and align-items for proper distribution
+    - Test grid template areas to ensure proper element placement
+    - Remove min-height constraints that force content overflow
+
+  # FEATURE DEVELOPMENT RULES
+  functionality:
+    - If a feature (like click-to-enlarge) doesn't work after 3 attempts, REMOVE it completely
+    - Don't spend endless time debugging broken features
+    - Focus on core presentation functionality over advanced interactions
+    - JavaScript event listeners often fail - test thoroughly or avoid complex interactions
+
+  # QUALITY CONTROL RULES
+  final_checks:
+    - EVERY slide change must be tested for viewport compliance
+    - EVERY content removal must have corresponding speaker note updates
+    - EVERY redesign must use available space effectively
+    - EVERY fix must address the specific problem without creating new ones
+
+# FORBIDDEN ACTIONS - NEVER DO THESE
+never_do:
+  - Make elements small and center them with empty space around
+  - Remove content without updating speaker notes
+  - Create layouts where content extends beyond viewport
+  - Fix one element by breaking five others
+  - Spend more than 3 attempts on the same broken feature
+  - Interpret "next slides" as "replace existing slides"
+  - Make changes to elements not mentioned in user feedback
+  - Increase element sizes when they already don't fit
+  - Create scattered, unrelated design elements instead of cohesive layouts
+
+# MANDATORY WORKFLOW
+workflow:
+  1. READ user request carefully - identify specific elements/issues mentioned
+  2. CHECK if content removal is involved - update speaker notes FIRST if so
+  3. ASSESS available space - design to use full viewport effectively  
+  4. MAKE targeted changes only to mentioned elements
+  5. TEST viewport compliance before submitting
+  6. VERIFY speaker notes contain all necessary detail for removed content
+
+# SUCCESS CRITERIA
+success_metrics:
+  - All content fits within 100vh viewport
+  - No wasted empty space (elements use 80%+ of available area)
+  - Speaker notes contain comprehensive details for simplified slides
+  - User can give presentation without reading slide content
+  - Premium aesthetic maintained while being functional
+  - Specific user complaints addressed without creating new problems 
