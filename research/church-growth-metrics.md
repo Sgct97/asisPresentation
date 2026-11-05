@@ -1,6 +1,6 @@
 # What Actually Correlates With Church Attendance Growth: Verified, Quantified Findings
 
-*Compiled 2026-11-05. Written with a Lutheran congregation in mind (ELCA, LCMS or WELS), but the data covers U.S. congregations in general.*
+*Compiled 2026-11-05, with post-pandemic data through the Hartford (April 2026) and Lifeway (2025) surveys. Written with a Lutheran congregation in mind (ELCA, LCMS or WELS), but the data covers U.S. congregations in general.*
 
 Every number below was checked against the primary source: the original report PDF, the survey topline, or the researcher's own write-up. Where I read a value off a bar chart rather than from the text, I mark it with "≈". Secondary blog claims that I couldn't verify have been left out.
 
@@ -31,6 +31,95 @@ Hadaway ran a multivariate analysis that controls for location, size and age str
 > Hadaway's own summary: "A congregation cannot presume that new people will somehow find their way to a congregation and eventually join. Recruitment efforts are essential for growth and the leader of the congregation must be involved."
 
 The 2020 FACT overview (Thumma, 2021) re-ran this analysis on 15,278 congregations. It reports that "these factors that correlate with flourishing religious communities have not changed dramatically across the 20 years of our research."
+
+---
+
+## Post-pandemic update (2023–2026)
+
+Three large national datasets now cover the period after COVID. They agree on the headline numbers. The newest one (Hartford, April 2026) also tests *why* some churches grew, which no other post-pandemic study has done at scale.
+
+### A. Hartford Institute: *Signs of Rebound Amid Uneven Recovery* (April 2026)
+National survey of **7,453 congregations** from 79 denominations, Sept–Dec 2025, ±3%. Same researchers and core questions as FACT 2010/2020, so the numbers are directly comparable.
+
+**Attendance has rebounded overall, but not for mainline churches**
+
+| Measure | Value |
+|---|---|
+| Median in-person attendance | 65 (2020) → 45 (2021) → 60 (2023) → **70 (2025)**. First rise in 25 years of tracking (it was 137 in 2000) |
+| Change in attendance, 2020–2025 | **29%** grew 25%+ · **14%** grew 5–25% · **12%** stable · **19%** declined 5–25% · **27%** declined 25%+ |
+| Overall | **43% growing vs. 46% declining**. Median change **0%**, vs. −7% in 2020 and −17% in 2023 |
+| **Mainline Protestant** (incl. ELCA), median 5-year change | **−20%**, the steepest of any group (median size 50) |
+| Evangelical Protestant, median 5-year change | **+2%**, the only group with net growth |
+| Congregations of 50 or fewer | **40%** declined by 25% or more |
+| Share of all attenders in churches of 250+ | 64% (2015) → 70% (2020) → **78% (2025)** |
+
+**Who the "new people" actually are.** From the companion 2024 Attender Survey of 24,000+ churchgoers:
+- **38%** of attenders joined their current congregation in the past five years.
+- Of those newcomers, **69% switched from another congregation** and **22% returned after a long absence**. Only **8% had never attended anywhere before**.
+- **63%** of new attenders say alignment with their beliefs, values and preferences was "very important" in choosing.
+- The authors' conclusion: "much of the current growth reflects redistribution within the religious landscape rather than expansion of the overall pool."
+
+**What the 2026 report found was associated with post-pandemic growth**
+
+| Factor | Finding |
+|---|---|
+| **Closing for in-person worship during COVID** | Churches that never closed: median **+9%**. Churches that closed: **−4%**. The longer the closure, the worse the attendance growth, outreach and optimism afterward. Median closure: **12 months for mainline** vs. **4 months for evangelical** churches |
+| **Size** | Larger congregations were "significantly more likely" to grow. They captured most of the switchers |
+| **Theology and politics** | "More theologically conservative religious traditions, and congregations located in more Republican-majority areas … experienced greater growth." The authors call this "likely" related but say they couldn't measure it directly |
+| **Recruitment emphasis** | Rose slightly: **39%** strongly agree they actively seek new members, but only **~28%** report high member involvement in recruiting. The authors say these "were not strongly related to the *additional* growth" seen in 2025 |
+
+**What the 2026 report found did *not* explain the rebound.** The authors tested each of these and found no meaningful change since earlier surveys, so none can account for the 2025 gains:
+- age mix (no increase in children, youth or young adults)
+- gender mix
+- regional migration
+- clergy age or tenure
+- online worship (the share of churches offering it *fell* from 75% to 69%; median online attendance is **20**)
+
+**Online worship is a supplement, not a growth engine.** From the 2024 Attender Survey:
+- **26%** of churchgoers regularly worship online.
+- **19%** alternate between online and in-person, and they are mostly younger parents.
+- Only **4%** worship mainly online.
+
+Livestreaming did not reduce in-person attendance. It works as a low-risk "test drive" for people shopping for a new church. Separately, churches that make more use of online giving report higher income even after controlling for size.
+
+### B. Lifeway Research pastor surveys (2024 and 2025)
+
+**Sept 2025** (Wheaton College Billy Graham Center; 1,003 Protestant pastors, ±3.3%). Attendance change from Fall 2023 to Fall 2025:
+
+| | Growing (+4% or more) | Plateaued | Declining |
+|---|---|---|---|
+| All Protestant churches | **54%** | 30% | 16% |
+| **Lutheran** | ≈49% (derived: 100 − 37 − 14) | **37%** (vs. Baptist 26%) | **14%** |
+| Attendance 250+ | **70%** | n/a | 7% |
+| Attendance 100–249 | **64%** | n/a | 11% |
+| Attendance 50–99 | **48%** | n/a | 22% |
+| Attendance 0–49 | **32%** | 43% | 25% |
+| Pastor age 18–44 vs. 55–64 | **61%** vs. **45%** | n/a | n/a |
+| South vs. Northeast | **58%** vs. **46%** | n/a | n/a |
+
+**Sept–Oct 2024** (Exponential and Thrivent; 1,001 pastors, ±4.1%). Share growing since 2022: **52%** overall. Evangelical **57%** vs. mainline **46%**. **Lutheran: 37%**, near the bottom with Methodists at 43%.
+
+**Lutheran-specific gaps from the 2025 survey**
+
+| Measure | Lutheran | Comparison |
+|---|---|---|
+| Newcomers who were previously unchurched: pastor says "0%" | **18%** | Baptist 4%, nondenominational 7% |
+| Churches where young adults (18–30) are more than 25% of attendance | **8%** | Nondenominational 34%, Baptist 26% |
+| Pastor hears members are having faith conversations with non-Christians | **67%** | Baptist 91%, nondenominational 92% |
+| Pastor intentionally builds friendships with non-Christians | **81%** | Baptist 94% |
+
+Among all Protestant churches, previously unchurched people make up a **median of 10%** of newcomers, down from 20% in 2016. The growth pool really is mostly switchers and returners.
+
+### C. Barna, 2025 State of the Church
+- Gen Z churchgoers now attend **1.9** weekends a month and Millennials **1.8**, up from about **1** in 2020.
+- They are now the most frequent attenders of any generation.
+- Churched adults overall average **1.6** weekends a month, which is about 2 of every 5 weekends.
+
+### What this adds to the earlier findings
+1. **The long-term correlates still hold.** The 2026 report lists size, Southern location, recruitment emphasis, more young adults, younger clergy and fewer members over 65, all "present in every survey of congregations over the past few decades." Lifeway's 2025 data shows the same gradients by size, pastor age and region.
+2. **The post-pandemic market is mostly people shopping for fit.** About 91% of recent newcomers are switchers or returners. They pick on alignment and fit, and they disproportionately land in larger churches. Clear identity and distinctiveness matter more than before. (Distinctiveness was already a significant growth predictor in FACT 2010.)
+3. **Mainline and Lutheran churches are behind on exactly the controllable factors.** The 2025 data shows Lutherans at or near the bottom on invitations (52% invited no one), member faith conversations (67%), young adults (8% above 25%) and reaching the unchurched. Those are the factors with the strongest pre-pandemic links to growth.
+4. **No post-pandemic study has yet re-run Hadaway's multivariate "what predicts growth" analysis.** The 2026 report is candid that the 2025 rebound isn't well explained by the usual factors. Treat the 2010 rankings as the best available evidence on *practices*, and the 2023–26 data as the current *baseline*.
 
 ---
 
@@ -190,6 +279,7 @@ These turn the findings above into things a congregation can actually count:
 | **Pastor time on outreach** | Hours per week in evangelism, community presence or recruitment | "Quite a bit" or "a great deal" ↔ 42–51% growing |
 | **Children or youth roles in worship** | Share of services where kids read, speak or perform | "Always" ↔ 45% growing vs. ≈21% for never |
 | **Serious conflict** | Count of areas of serious conflict in past 5 years | **0**. Each added area raises decline risk (39% → 64%) |
+| **Where newcomers come from** | Ask each new regular: transferred from another church, returning after time away, or never attended before? | Protestant median: **10%** previously unchurched; nationally ~69% switchers, 22% returners, 8% first-timers |
 | **Online presence** | Online and hybrid attendance tracked separately (ELCA Form A already asks for this) | Necessary for discovery (**59%** of under-30 searchers look online) but not an independent growth driver on its own |
 
 ---
@@ -198,13 +288,22 @@ These turn the findings above into things a congregation can actually count:
 
 1. **These are correlations, not experiments.** No randomized trial of "church growth tactics" exists. FACT is a key-informant survey, usually filled out by the pastor, so items like "spiritually vital" and "clear mission" are self-assessed. Hadaway's multivariate controls help but can't prove cause and effect.
 2. **Reverse causation is real for some items.** Growing churches *add* services and staff; they don't only grow *because of* them. Hadaway flags this himself.
-3. **The 2010 multivariate analysis is the most rigorous public one, but it's pre-pandemic.** FACT 2020 says the same correlates hold. EPIC 2023–25 data shows the overall growth/decline split (~⅓ growing, ~½ declining) hasn't changed.
+3. **The 2010 multivariate analysis is the most rigorous public one, but it's pre-pandemic.** FACT 2020 says the same correlates hold. The 2025 Hartford survey shows a better split (43% growing, 46% declining) but finds the rebound is mostly switching between churches, and it does not re-run the multivariate model. Post-pandemic growth among mainline churches remains weak (−20% median over five years).
 4. **Denominational family matters, and it can't be changed.** ELCA congregations sit in the "mainline" group, which has lower base rates, older members and more decline. LCMS and WELS are in the "conservative Protestant" group. The *levers* (invitation, events, follow-up, conflict avoidance, family ministry) worked within every family Hadaway examined.
 5. **≈ values** were read from bar charts in the original PDFs. Text-stated values have no ≈.
 
 ---
 
 ## Sources (primary)
+
+**Post-pandemic**
+- Hartford Institute for Religion Research (FACT and EPIC). *Signs of Rebound Amid Uneven Recovery: The Changing Congregational Landscape,* April 2026. n = 7,453 congregations, fielded Sept–Dec 2025. https://www.covidreligionresearch.org/wp-content/uploads/2026/04/Signs-of-Rebound-Amid-Uneven-Recovery-The-Changing-Congregational-Landscape-1-1.pdf
+- Lifeway Research and Wheaton College Billy Graham Center. *Pastors' Views on Reaching Non-Christians and Young Adults.* Phone survey of 1,003 Protestant pastors, Sept 2–24, 2025. https://research.lifeway.com/wp-content/uploads/2026/08/Lifeway-Pastors-Sept-2025-Reachring-Non-Christians-and-Young-Adults.pdf
+- Lifeway Research. "Half of Churches Experiencing Post-Pandemic Attendance Growth," Mar. 18, 2025 (1,001 pastors, Sept–Oct 2024). https://research.lifeway.com/2025/03/18/half-of-churches-experiencing-post-pandemic-attendance-growth/
+- EPIC. "Liturgy in the Living Room," 2024 Attender Survey (24,000+ attenders). https://www.covidreligionresearch.org/study-shows-online-church-attendance/
+- Barna Group. "Young Adults Lead a Resurgence in Church Attendance," Sept. 2025. https://barna.com/research/young-adults-lead-resurgence-in-church-attendance
+
+**Pre-pandemic and general**
 
 - Hadaway, C. Kirk. *FACTs on Growth: 2010.* Hartford Institute for Religion Research, 2011. n = 11,077 congregations (7,403 weighted for the analysis). https://faithcommunitiestoday.org/wp-content/uploads/2019/01/FACTs-on-Growth-2010.pdf
 - Thumma, Scott. *Twenty Years of Congregational Change: The 2020 Faith Communities Today Overview.* Hartford Institute for Religion Research, 2021. n = 15,278 congregations. https://faithcommunitiestoday.org/wp-content/uploads/2021/10/Faith-Communities-Today-2020-Summary-Report.pdf
