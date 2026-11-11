@@ -16,7 +16,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Adore Him · Christmas at Bay Pines Lutheran</title>
 <meta name="description" content="Christmas 2026 at Bay Pines Lutheran Church in Seminole, FL — Kids Christmas Service, Be the Light, Christmas Eve and Christmas Day.">
-<meta name="theme-color" content="#0c0a08">
+<meta name="theme-color" content="#160d07">
 <meta property="og:title" content="Adore Him — Christmas at Bay Pines Lutheran">
 <meta property="og:description" content="Kids Christmas Service · Be the Light · Christmas Eve · Christmas Day. Seminole, FL.">
 <meta property="og:type" content="website">
@@ -25,15 +25,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root {
-    --night: #0c0a08;
-    --night-2: #14110d;
-    --ink: #efe6d6;
-    --ink-soft: #b9ad99;
-    --ink-faint: #7d7365;
+    --night: #160d07;
+    --night-2: #1f130a;
+    --ink: #f3e3c8;
+    --ink-soft: #c9b08c;
+    --ink-faint: #8f7658;
     --gold: #e8b76a;
     --gold-deep: #b9853f;
     --ember: #ffcf8a;
-    --rule: rgba(232, 183, 106, .22);
+    --rule: rgba(232, 160, 90, .22);
     --serif: "Cormorant Garamond", "Iowan Old Style", Georgia, serif;
     --sans: "Jost", "Gill Sans", "Avenir Next", sans-serif;
   }
@@ -61,6 +61,15 @@
     justify-items: center;
     overflow: hidden;
     isolation: isolate;
+    background:
+      radial-gradient(ellipse 70% 48% at 50% 62%, rgba(214, 120, 40, .30), transparent 72%),
+      radial-gradient(ellipse 120% 70% at 50% 70%, rgba(120, 58, 18, .45), transparent 80%),
+      linear-gradient(180deg, #120a05 0%, #1d1009 55%, #160d07 100%);
+  }
+  /* soft vignette, like the dark corners of a stable */
+  .hero::after {
+    content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+    background: radial-gradient(ellipse 85% 75% at 50% 58%, transparent 55%, rgba(8, 4, 2, .65) 100%);
   }
 
   /* string of lights across the top */
@@ -74,10 +83,10 @@
     height: 120%;
     transform: translateX(-50%);
     background:
-      radial-gradient(ellipse 22% 9% at 50% 78%, rgba(255, 214, 150, .28), transparent 70%),
-      linear-gradient(180deg, rgba(255, 226, 180, .16) 0%, rgba(255, 210, 150, .07) 55%, transparent 80%);
-    clip-path: polygon(44% 0, 56% 0, 80% 100%, 20% 100%);
-    filter: blur(18px);
+      radial-gradient(ellipse 26% 10% at 50% 78%, rgba(255, 190, 110, .26), transparent 70%),
+      linear-gradient(180deg, rgba(255, 196, 120, .10) 0%, rgba(255, 170, 90, .06) 55%, transparent 80%);
+    clip-path: polygon(42% 0, 58% 0, 84% 100%, 16% 100%);
+    filter: blur(28px);
     z-index: 0;
   }
   #motes { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; }
@@ -108,8 +117,8 @@
     line-height: .9;
     letter-spacing: -.01em;
     margin-top: 22px;
-    color: #f6ecdb;
-    text-shadow: 0 0 40px rgba(255, 200, 120, .18);
+    color: #f8e6c6;
+    text-shadow: 0 0 50px rgba(255, 170, 80, .30);
   }
 
   .manger-wrap {
@@ -146,6 +155,7 @@
   .scroll-cue span.line { width: 1px; height: 38px; background: linear-gradient(var(--gold), transparent); }
 
   /* ---------- EVENTS ---------- */
+  main { background: radial-gradient(ellipse 90% 40% at 50% 0%, rgba(150, 75, 25, .22), transparent 70%), var(--night); }
   .season {
     position: relative;
     max-width: 880px;
@@ -178,7 +188,7 @@
     font-size: 11px; letter-spacing: .32em; text-transform: uppercase; color: var(--gold);
     margin-bottom: 6px;
   }
-  .date .num { font-size: 64px; font-weight: 400; color: #f6ecdb; font-variant-numeric: lining-nums; }
+  .date .num { font-size: 64px; font-weight: 400; color: #f8e6c6; font-variant-numeric: lining-nums; }
   .date .num .dash { color: var(--ink-faint); font-size: .6em; vertical-align: .22em; padding: 0 .06em; }
   .date .dow { display: block; margin-top: 8px; font-family: var(--sans); font-size: 13px; color: var(--ink-soft); }
 
@@ -273,17 +283,17 @@
         <defs>
           <radialGradient id="g-halo" cx="50%" cy="50%" r="50%">
             <stop offset="0" stop-color="#ffe7bd" stop-opacity=".95"/>
-            <stop offset=".25" stop-color="#ffcb7d" stop-opacity=".55"/>
-            <stop offset=".6" stop-color="#d98a3a" stop-opacity=".14"/>
-            <stop offset="1" stop-color="#d98a3a" stop-opacity="0"/>
+            <stop offset=".25" stop-color="#ffb860" stop-opacity=".6"/>
+            <stop offset=".6" stop-color="#d0702a" stop-opacity=".2"/>
+            <stop offset="1" stop-color="#d0702a" stop-opacity="0"/>
           </radialGradient>
           <radialGradient id="g-floor" cx="50%" cy="50%" r="50%">
-            <stop offset="0" stop-color="#ffd59a" stop-opacity=".22"/>
-            <stop offset="1" stop-color="#ffd59a" stop-opacity="0"/>
+            <stop offset="0" stop-color="#ffb066" stop-opacity=".34"/>
+            <stop offset="1" stop-color="#ffb066" stop-opacity="0"/>
           </radialGradient>
           <linearGradient id="g-wood" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stop-color="#6b4a2c"/>
-            <stop offset=".35" stop-color="#3a2817"/>
+            <stop offset="0" stop-color="#7d4f27"/>
+            <stop offset=".35" stop-color="#432812"/>
             <stop offset="1" stop-color="#1a120b"/>
           </linearGradient>
           <linearGradient id="g-leg" x1="0" y1="0" x2="0" y2="1">
@@ -297,7 +307,7 @@
         </defs>
 
         <!-- pool of light on the ground -->
-        <ellipse cx="220" cy="232" rx="210" ry="18" fill="url(#g-floor)"/>
+        <ellipse cx="220" cy="232" rx="260" ry="30" fill="url(#g-floor)"/>
 
         <!-- back legs -->
         <g fill="url(#g-leg)">
@@ -306,7 +316,7 @@
         </g>
 
         <!-- glow rising from inside -->
-        <ellipse class="halo" cx="220" cy="112" rx="170" ry="86" fill="url(#g-halo)"/>
+        <ellipse class="halo" cx="220" cy="110" rx="200" ry="104" fill="url(#g-halo)"/>
 
         <!-- straw: drawn by the script below so it falls naturally -->
         <path d="M104 120 Q150 100 220 98 Q290 100 336 120 Z" fill="#e9b56c" opacity=".7"/>
@@ -523,13 +533,13 @@
     bulbs.forEach(b => {
       const tw = reduce ? .85 : .55 + .45 * Math.pow(Math.sin(t * b.speed + b.phase) * .5 + .5, 2);
       const a = tw * b.depth;
-      const col = b.warm ? '255, 214, 150' : '255, 170, 80';
+      const col = b.warm ? '255, 196, 120' : '255, 150, 60';
       const g = lx.createRadialGradient(b.x, b.y, 0, b.x, b.y, b.r * 7);
       g.addColorStop(0, `rgba(${col}, ${.55 * a})`);
       g.addColorStop(1, `rgba(${col}, 0)`);
       lx.fillStyle = g;
       lx.beginPath(); lx.arc(b.x, b.y, b.r * 7, 0, Math.PI * 2); lx.fill();
-      lx.fillStyle = `rgba(255, 244, 220, ${.35 + .65 * a})`;
+      lx.fillStyle = `rgba(255, 232, 190, ${.35 + .65 * a})`;
       lx.beginPath(); lx.arc(b.x, b.y, b.r, 0, Math.PI * 2); lx.fill();
     });
   }
@@ -568,7 +578,7 @@
         if (m.y > h * .85) motes[i] = spawnMote(w, h, false);
       }
       const fade = Math.min(1, (h * .85 - m.y) / 120);
-      mx.fillStyle = `rgba(255, 228, 185, ${m.a * Math.max(0, fade)})`;
+      mx.fillStyle = `rgba(255, 205, 140, ${m.a * Math.max(0, fade)})`;
       mx.beginPath(); mx.arc(m.x, m.y, m.r, 0, Math.PI * 2); mx.fill();
     });
   }
