@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Adore Him · QR Code</title>
+<meta name="robots" content="noindex">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@1&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root { --night:#0c0a08; --ink:#efe6d6; --soft:#b9ad99; --gold:#e8b76a; --rule:rgba(232,183,106,.25); }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--night); color: var(--ink); font: 300 16px/1.6 "Jost", sans-serif; padding: 48px 16px; }
+  main { max-width: 560px; margin: 0 auto; }
+  h1 { font: italic 400 52px/1 "Cormorant Garamond", serif; }
+  p { color: var(--soft); margin-top: 10px; }
+  label { display: block; margin-top: 28px; font-size: 12px; letter-spacing: .24em; text-transform: uppercase; color: var(--soft); }
+  input { width: 100%; margin-top: 8px; padding: 12px 14px; background: #17130f; border: 1px solid var(--rule); color: var(--ink); font: 400 15px "Jost", sans-serif; }
+  .row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 14px; }
+  button { cursor: pointer; padding: 12px 18px; border: 1px solid var(--gold); background: none; color: var(--gold); font: 400 13px "Jost", sans-serif; letter-spacing: .14em; text-transform: uppercase; }
+  button:hover { background: var(--gold); color: var(--night); }
+  .card { margin-top: 28px; background: #fff; padding: 28px; display: grid; place-items: center; }
+  .card svg { width: 100%; max-width: 360px; height: auto; display: block; }
+  .tip { font-size: 14px; margin-top: 18px; }
+  @media print { body { background: #fff; padding: 0; } main > *:not(.card) { display: none; } .card { margin: 0; } }
+</style>
+</head>
+<body>
+<main>
+  <h1>QR code</h1>
+  <p>Paste the live address of the Christmas page. The code updates as you type. Download it as SVG for the printer (stays sharp at any size) or PNG for social posts and slides.</p>
+  <label for="url">Page address</label>
+  <input id="url" type="url" spellcheck="false">
+  <div class="row">
+    <button id="svg">Download SVG</button>
+    <button id="png">Download PNG</button>
+    <button onclick="print()">Print</button>
+  </div>
+  <div class="card" id="out"></div>
+  <p class="tip">Before printing anything, scan the code with your own phone to confirm it opens the right page. On printed pieces, keep it at least 1 inch (2.5 cm) square.</p>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+<script>
+  const input = document.getElementById('url');
+  const out = document.getElementById('out');
+  // Default to the Christmas page that sits next to this file
+  input.value = location.protocol.startsWith('http') ? new URL('./', location.href).href : '';
+
+  function makeSvg() {
+    const q = qrcode(0, 'Q');            // 'Q' = high error correction, survives smudges on print
+    q.addData(input.value.trim() || ' ');
+    q.make();
+    return q.createSvgTag({ cellSize: 10, margin: 4, scalable: true });
+  }
+  function render() { out.innerHTML = makeSvg(); }
+  input.addEventListener('input', render);
+  render();
+
+  function save(blob, name) {
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob); a.download = name; a.click();
+    setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+  }
+  document.getElementById('svg').onclick = () =>
+    save(new Blob([makeSvg()], { type: 'image/svg+xml' }), 'adore-him-qr.svg');
+  document.getElementById('png').onclick = () => {
+    const img = new Image();
+    img.onload = () => {
+      const c = document.createElement('canvas'); c.width = c.height = 2000;
+      const x = c.getContext('2d'); x.fillStyle = '#fff'; x.fillRect(0, 0, 2000, 2000);
+      x.imageSmoothingEnabled = false; x.drawImage(img, 0, 0, 2000, 2000);
+      c.toBlob(b => save(b, 'adore-him-qr.png'));
+    };
+    img.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(makeSvg());
+  };
+</script>
+</body>
+</html>

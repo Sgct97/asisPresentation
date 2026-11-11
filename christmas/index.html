@@ -1,0 +1,593 @@
+<!doctype html>
+<!--
+  ================================================================
+  BAY PINES LUTHERAN — CHRISTMAS 2026 LANDING PAGE
+
+  TO EDIT SERVICE TIMES: search this file for "EDIT:".
+  Each event has one <p class="when"> line. Replace the
+  "Time to be announced" text with the real time, e.g.
+      <p class="when">6:30 pm</p>
+  and delete the class="tba" on it.
+  ================================================================
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Adore Him · Christmas at Bay Pines Lutheran</title>
+<meta name="description" content="Christmas 2026 at Bay Pines Lutheran Church in Seminole, FL — Kids Christmas Service, Be the Light, Christmas Eve and Christmas Day.">
+<meta name="theme-color" content="#0c0a08">
+<meta property="og:title" content="Adore Him — Christmas at Bay Pines Lutheran">
+<meta property="og:description" content="Kids Christmas Service · Be the Light · Christmas Eve · Christmas Day. Seminole, FL.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --night: #0c0a08;
+    --night-2: #14110d;
+    --ink: #efe6d6;
+    --ink-soft: #b9ad99;
+    --ink-faint: #7d7365;
+    --gold: #e8b76a;
+    --gold-deep: #b9853f;
+    --ember: #ffcf8a;
+    --rule: rgba(232, 183, 106, .22);
+    --serif: "Cormorant Garamond", "Iowan Old Style", Georgia, serif;
+    --sans: "Jost", "Gill Sans", "Avenir Next", sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { background: var(--night); scroll-behavior: smooth; }
+  body {
+    background: var(--night);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  a { color: inherit; }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    position: relative;
+    min-height: 100svh;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    justify-items: center;
+    overflow: hidden;
+    isolation: isolate;
+  }
+
+  /* string of lights across the top */
+  #lights { position: absolute; inset: 0 0 auto 0; width: 100%; height: 160px; z-index: 3; pointer-events: none; }
+
+  /* the spotlight: a soft cone from above */
+  .beam {
+    position: absolute;
+    left: 50%; top: -10%;
+    width: min(150vw, 1100px);
+    height: 120%;
+    transform: translateX(-50%);
+    background:
+      radial-gradient(ellipse 22% 9% at 50% 78%, rgba(255, 214, 150, .28), transparent 70%),
+      linear-gradient(180deg, rgba(255, 226, 180, .16) 0%, rgba(255, 210, 150, .07) 55%, transparent 80%);
+    clip-path: polygon(44% 0, 56% 0, 80% 100%, 20% 100%);
+    filter: blur(18px);
+    z-index: 0;
+  }
+  #motes { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; }
+
+  .hero-inner {
+    position: relative; z-index: 2;
+    width: 100%; max-width: 780px;
+    padding: 132px 20px 0;
+    text-align: center;
+    display: flex; flex-direction: column; align-items: center;
+  }
+  .eyebrow {
+    font-family: var(--sans);
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: .32em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  .eyebrow .dot { color: var(--gold); padding: 0 .6em; }
+  .eyebrow .nw { white-space: nowrap; }
+
+  h1 {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(76px, 17vw, 168px);
+    line-height: .9;
+    letter-spacing: -.01em;
+    margin-top: 22px;
+    color: #f6ecdb;
+    text-shadow: 0 0 40px rgba(255, 200, 120, .18);
+  }
+
+  .manger-wrap {
+    position: relative;
+    width: min(440px, 88vw);
+    margin-top: clamp(18px, 4vh, 40px);
+  }
+  .manger-wrap svg { display: block; width: 100%; height: auto; overflow: visible; }
+  .halo { animation: breathe 6s ease-in-out infinite; transform-origin: 220px 120px; }
+  @keyframes breathe { 0%,100% { opacity: .85; } 50% { opacity: 1; } }
+
+  .verse {
+    font-family: var(--serif);
+    font-size: clamp(19px, 2.6vw, 23px);
+    line-height: 1.45;
+    color: var(--ink-soft);
+    max-width: 30ch;
+    margin: 30px auto 0;
+  }
+  .verse cite {
+    display: block; margin-top: 10px;
+    font-family: var(--sans); font-style: normal;
+    font-size: 11px; letter-spacing: .28em; text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+
+  .scroll-cue {
+    position: relative; z-index: 2;
+    margin: 40px 0 34px;
+    font-size: 11px; letter-spacing: .3em; text-transform: uppercase;
+    color: var(--ink-faint); text-decoration: none;
+    display: flex; flex-direction: column; align-items: center; gap: 10px;
+  }
+  .scroll-cue span.line { width: 1px; height: 38px; background: linear-gradient(var(--gold), transparent); }
+
+  /* ---------- EVENTS ---------- */
+  .season {
+    position: relative;
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 72px 20px 40px;
+  }
+  .section-head {
+    display: flex; align-items: baseline; justify-content: space-between; gap: 16px;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 14px;
+  }
+  .section-head h2 {
+    font-family: var(--serif); font-weight: 500;
+    font-size: clamp(30px, 5vw, 42px); line-height: 1.1;
+  }
+  .section-head p { font-size: 12px; letter-spacing: .28em; text-transform: uppercase; color: var(--ink-faint); white-space: nowrap; }
+
+  .events { list-style: none; }
+  .event {
+    display: grid;
+    grid-template-columns: 128px 1fr;
+    gap: 28px;
+    padding: 34px 0;
+    border-bottom: 1px solid var(--rule);
+    align-items: start;
+  }
+  .date { font-family: var(--serif); line-height: 1; }
+  .date .mon {
+    display: block; font-family: var(--sans); font-weight: 500;
+    font-size: 11px; letter-spacing: .32em; text-transform: uppercase; color: var(--gold);
+    margin-bottom: 6px;
+  }
+  .date .num { font-size: 64px; font-weight: 400; color: #f6ecdb; font-variant-numeric: lining-nums; }
+  .date .num .dash { color: var(--ink-faint); font-size: .6em; vertical-align: .22em; padding: 0 .06em; }
+  .date .dow { display: block; margin-top: 8px; font-family: var(--sans); font-size: 13px; color: var(--ink-soft); }
+
+  .event h3 {
+    font-family: var(--serif); font-weight: 500;
+    font-size: clamp(28px, 4.2vw, 36px); line-height: 1.1;
+    margin-top: 6px;
+  }
+  .event .desc { color: var(--ink-soft); margin-top: 10px; max-width: 46ch; }
+  .when {
+    margin-top: 16px;
+    font-family: var(--sans); font-weight: 500;
+    font-size: 15px; letter-spacing: .04em; color: var(--ember);
+  }
+  .when.tba { font-weight: 400; font-style: italic; color: var(--ink-faint); letter-spacing: .02em; }
+
+  /* the Christmas Eve row gets its own candle */
+  .event.eve { position: relative; }
+  .event.eve .candle { position: absolute; right: 4px; top: 34px; width: 34px; opacity: .9; }
+  .flame { transform-origin: 17px 30px; animation: flicker 2.8s ease-in-out infinite; }
+  @keyframes flicker {
+    0%,100% { transform: scale(1, 1) rotate(0deg); }
+    23% { transform: scale(.96, 1.05) rotate(-2deg); }
+    47% { transform: scale(1.03, .96) rotate(1.5deg); }
+    71% { transform: scale(.98, 1.03) rotate(-1deg); }
+  }
+
+  /* ---------- VISIT ---------- */
+  .visit {
+    max-width: 880px; margin: 0 auto;
+    padding: 56px 20px 96px;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 40px;
+  }
+  .visit h2 { font-family: var(--serif); font-weight: 500; font-size: clamp(28px, 4.4vw, 38px); line-height: 1.15; }
+  .visit p { color: var(--ink-soft); margin-top: 12px; }
+  .visit address { font-style: normal; font-family: var(--serif); font-size: 24px; line-height: 1.35; color: var(--ink); }
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
+  .btn {
+    display: inline-block; text-decoration: none;
+    font-size: 13px; font-weight: 400; letter-spacing: .16em; text-transform: uppercase;
+    padding: 13px 20px; border: 1px solid var(--gold-deep); color: var(--gold);
+    transition: background .25s, color .25s;
+  }
+  .btn:hover, .btn:focus-visible { background: var(--gold); color: var(--night); outline: none; }
+
+  footer {
+    text-align: center; padding: 28px 20px 44px;
+    border-top: 1px solid var(--rule);
+    font-size: 12px; letter-spacing: .24em; text-transform: uppercase; color: var(--ink-faint);
+  }
+  footer .ah { display: block; font-family: var(--serif); font-style: italic; text-transform: none; letter-spacing: 0; font-size: 22px; color: var(--ink-soft); margin-bottom: 6px; }
+
+  /* fade-in on scroll */
+  .reveal { opacity: 0; transform: translateY(14px); transition: opacity .9s ease, transform .9s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+
+  @media (max-width: 640px) {
+    body { font-size: 16px; }
+    .hero-inner { padding-top: 112px; }
+    .eyebrow { letter-spacing: .24em; font-size: 11px; }
+    .event { grid-template-columns: 1fr; gap: 6px; padding: 30px 0; }
+    .date { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+    .date .mon { margin: 0; }
+    .date .num { font-size: 46px; }
+    .date .dow { margin: 0; }
+    .event.eve .candle { top: 30px; width: 28px; }
+    .visit { grid-template-columns: 1fr; gap: 28px; }
+    .section-head { flex-direction: column; gap: 4px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .halo, .flame { animation: none; }
+    .reveal { opacity: 1; transform: none; transition: none; }
+    html { scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <canvas id="lights" aria-hidden="true"></canvas>
+  <div class="beam" aria-hidden="true"></div>
+  <canvas id="motes" aria-hidden="true"></canvas>
+
+  <div class="hero-inner">
+    <p class="eyebrow"><span class="nw">Bay Pines Lutheran</span><span class="dot">·</span><span class="nw">Christmas 2026</span></p>
+    <h1>Adore Him</h1>
+
+    <div class="manger-wrap" aria-hidden="true">
+      <!-- The manger: lit from directly above, the light gathered in the straw -->
+      <svg viewBox="0 0 440 250" role="img">
+        <defs>
+          <radialGradient id="g-halo" cx="50%" cy="50%" r="50%">
+            <stop offset="0" stop-color="#ffe7bd" stop-opacity=".95"/>
+            <stop offset=".25" stop-color="#ffcb7d" stop-opacity=".55"/>
+            <stop offset=".6" stop-color="#d98a3a" stop-opacity=".14"/>
+            <stop offset="1" stop-color="#d98a3a" stop-opacity="0"/>
+          </radialGradient>
+          <radialGradient id="g-floor" cx="50%" cy="50%" r="50%">
+            <stop offset="0" stop-color="#ffd59a" stop-opacity=".22"/>
+            <stop offset="1" stop-color="#ffd59a" stop-opacity="0"/>
+          </radialGradient>
+          <linearGradient id="g-wood" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#6b4a2c"/>
+            <stop offset=".35" stop-color="#3a2817"/>
+            <stop offset="1" stop-color="#1a120b"/>
+          </linearGradient>
+          <linearGradient id="g-leg" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#4a331d"/>
+            <stop offset="1" stop-color="#130d08"/>
+          </linearGradient>
+          <linearGradient id="g-straw" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#ffe2a8"/>
+            <stop offset="1" stop-color="#c8893f"/>
+          </linearGradient>
+        </defs>
+
+        <!-- pool of light on the ground -->
+        <ellipse cx="220" cy="232" rx="210" ry="18" fill="url(#g-floor)"/>
+
+        <!-- back legs -->
+        <g fill="url(#g-leg)">
+          <path d="M96 118 L108 114 L156 230 L144 233 Z"/>
+          <path d="M344 118 L332 114 L284 230 L296 233 Z"/>
+        </g>
+
+        <!-- glow rising from inside -->
+        <ellipse class="halo" cx="220" cy="112" rx="170" ry="86" fill="url(#g-halo)"/>
+
+        <!-- straw: drawn by the script below so it falls naturally -->
+        <path d="M104 120 Q150 100 220 98 Q290 100 336 120 Z" fill="#e9b56c" opacity=".7"/>
+        <g id="straw" stroke-linecap="round" fill="none"></g>
+
+        <!-- the trough: four slightly uneven planks -->
+        <g>
+          <path d="M98 118 L342 118 L318 194 L122 194 Z" fill="url(#g-wood)"/>
+          <path d="M98 118 L342 118 L341 122 L99 122 Z" fill="#c99859" opacity=".85"/>
+          <g stroke="#0e0905" stroke-width="1.4" opacity=".7">
+            <path d="M104 137 L336 136"/>
+            <path d="M110 156 L330 157"/>
+            <path d="M116 175 L324 175"/>
+          </g>
+          <g stroke="#a7783f" stroke-width=".8" opacity=".35">
+            <path d="M105 139 L335 138"/>
+            <path d="M111 158 L329 159"/>
+          </g>
+        </g>
+
+        <!-- front crossed legs -->
+        <g fill="url(#g-leg)">
+          <path d="M86 112 L100 110 L172 236 L158 240 Z"/>
+          <path d="M150 104 L162 108 L104 238 L90 236 Z"/>
+          <path d="M354 112 L340 110 L268 236 L282 240 Z"/>
+          <path d="M290 104 L278 108 L336 238 L350 236 Z"/>
+        </g>
+        <!-- light catching the tops of the legs -->
+        <g fill="#d6a565" opacity=".6">
+          <path d="M86 112 L100 110 L102 114 L88 116 Z"/>
+          <path d="M150 104 L162 108 L160 112 L148 108 Z"/>
+          <path d="M354 112 L340 110 L338 114 L352 116 Z"/>
+          <path d="M290 104 L278 108 L280 112 L292 108 Z"/>
+        </g>
+      </svg>
+    </div>
+
+    <p class="verse">“For unto you is born this day in the city of David a Saviour, which is Christ the Lord.”<cite>Luke 2:11</cite></p>
+  </div>
+
+  <a class="scroll-cue" href="#season">Christmas services<span class="line"></span></a>
+</header>
+
+<main>
+  <section class="season" id="season">
+    <div class="section-head reveal">
+      <h2>Come and worship</h2>
+      <p>December 2026</p>
+    </div>
+
+    <ol class="events">
+      <li class="event reveal">
+        <div class="date"><span class="mon">Dec</span><span class="num">17</span><span class="dow">Thursday</span></div>
+        <div>
+          <h3>Kids Christmas Service</h3>
+          <p class="desc">Our children tell the story of the first Christmas. Bring the grandparents.</p>
+          <!-- EDIT: Kids Christmas Service time -->
+          <p class="when tba">Time to be announced</p>
+        </div>
+      </li>
+
+      <li class="event reveal">
+        <div class="date"><span class="mon">Dec</span><span class="num">18<span class="dash">–</span>20</span><span class="dow">Friday – Sunday</span></div>
+        <div>
+          <h3>Be the Light</h3>
+          <p class="desc">Three days at Bay Pines to carry His light into the season.</p>
+          <!-- EDIT: Be the Light times -->
+          <p class="when tba">Times to be announced</p>
+        </div>
+      </li>
+
+      <li class="event eve reveal">
+        <svg class="candle" viewBox="0 0 34 90" aria-hidden="true">
+          <defs>
+            <radialGradient id="g-flame" cx="50%" cy="65%" r="60%">
+              <stop offset="0" stop-color="#fff6dc"/>
+              <stop offset=".45" stop-color="#ffd27e"/>
+              <stop offset="1" stop-color="#f08a2a" stop-opacity="0"/>
+            </radialGradient>
+            <radialGradient id="g-cglow" cx="50%" cy="50%" r="50%">
+              <stop offset="0" stop-color="#ffc874" stop-opacity=".45"/>
+              <stop offset="1" stop-color="#ffc874" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <circle cx="17" cy="22" r="17" fill="url(#g-cglow)"/>
+          <path class="flame" d="M17 6 C22 15 23 22 17 30 C11 22 12 15 17 6 Z" fill="url(#g-flame)"/>
+          <line x1="17" y1="29" x2="17" y2="35" stroke="#2a1d10" stroke-width="1.4"/>
+          <rect x="9" y="35" width="16" height="55" rx="1.5" fill="#e9dcc4"/>
+          <rect x="9" y="35" width="5" height="55" fill="#fff" opacity=".25"/>
+        </svg>
+        <div class="date"><span class="mon">Dec</span><span class="num">24</span><span class="dow">Thursday</span></div>
+        <div>
+          <h3>Christmas Eve</h3>
+          <p class="desc">Carols, Scripture, and candlelight as we wait for the birth of Christ.</p>
+          <!-- EDIT: Christmas Eve service time(s) -->
+          <p class="when tba">Service times to be announced</p>
+        </div>
+      </li>
+
+      <li class="event reveal">
+        <div class="date"><span class="mon">Dec</span><span class="num">25</span><span class="dow">Friday</span></div>
+        <div>
+          <h3>Christmas Day</h3>
+          <p class="desc">Christ is born. Come and celebrate the morning with us.</p>
+          <!-- EDIT: Christmas Day service time -->
+          <p class="when tba">Time to be announced</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <section class="visit reveal" aria-labelledby="visit-h">
+    <div>
+      <h2 id="visit-h">There’s room for you here.</h2>
+      <p>Whether Bay Pines has been your church for years or this is your first Christmas with us, you are welcome at every service.</p>
+    </div>
+    <div>
+      <address>Bay Pines Lutheran Church<br>7589 113th Lane<br>Seminole, FL 33772</address>
+      <div class="actions">
+        <a class="btn" href="https://maps.google.com/?q=Bay+Pines+Lutheran+Church,+7589+113th+Lane,+Seminole,+FL+33772" target="_blank" rel="noopener">Directions</a>
+        <a class="btn" href="tel:+17273911810">727-391-1810</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span class="ah">O come, let us adore Him</span>
+  Bay Pines Lutheran Church · Seminole, Florida
+</footer>
+
+<script>
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+  /* ---- Straw in the manger: many fine, uneven strands ---- */
+  (function straw() {
+    const g = document.getElementById('straw');
+    let seed = 7; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+    const ns = 'http://www.w3.org/2000/svg';
+    const cols = ['#ffe6b0', '#f4c47c', '#e2a85c', '#c88d48', '#fff1cf'];
+    for (let i = 0; i < 170; i++) {
+      const t = rnd();
+      const x = 106 + t * 228;
+      const y = 120 - 21 * Math.sin(Math.PI * t) + rnd() * 6;
+      // strands near the ends lean outward; the middle ones lie every which way
+      const lean = (t - .5) * 1.6 + (rnd() - .5) * 2.2;
+      const ang = -Math.PI / 2 + lean * .9;
+      const len = 6 + Math.pow(rnd(), 1.6) * 24;
+      const bend = (rnd() - .5) * 6;
+      const x2 = x + Math.cos(ang) * len, y2 = Math.min(y + Math.sin(ang) * len, 121);
+      const p = document.createElementNS(ns, 'path');
+      p.setAttribute('d', `M${x.toFixed(1)} ${y.toFixed(1)} Q${((x + x2) / 2 + bend).toFixed(1)} ${((y + y2) / 2).toFixed(1)} ${x2.toFixed(1)} ${y2.toFixed(1)}`);
+      p.setAttribute('stroke', cols[Math.floor(rnd() * cols.length)]);
+      p.setAttribute('stroke-width', (.6 + rnd() * 1.1).toFixed(2));
+      p.setAttribute('opacity', (.55 + rnd() * .45).toFixed(2));
+      g.appendChild(p);
+    }
+  })();
+
+  /* ---- A string of warm lights draped across the top ---- */
+  const lc = document.getElementById('lights');
+  const lx = lc.getContext('2d');
+  let bulbs = [], strands = [];
+
+  function buildLights() {
+    const w = lc.clientWidth, h = lc.clientHeight;
+    lc.width = w * dpr; lc.height = h * dpr;
+    lx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    bulbs = []; strands = [];
+    // two swags that meet in the middle, plus a shallower one behind
+    const swags = [
+      { x0: -20, x1: w / 2, y0: -6, sag: 66, depth: 1 },
+      { x0: w / 2, x1: w + 20, y0: -6, sag: 66, depth: 1 },
+      { x0: -20, x1: w + 20, y0: 2, sag: 34, depth: .55 },
+    ];
+    const spacing = w < 640 ? 26 : 34;
+    swags.forEach(s => {
+      const pts = [];
+      const len = s.x1 - s.x0;
+      for (let i = 0; i <= 60; i++) {
+        const t = i / 60;
+        pts.push([s.x0 + len * t, s.y0 + s.sag * 4 * t * (1 - t)]);
+      }
+      strands.push({ pts, depth: s.depth });
+      const n = Math.floor(len / (spacing / s.depth));
+      for (let i = 1; i < n; i++) {
+        const t = i / n;
+        bulbs.push({
+          x: s.x0 + len * t,
+          y: s.y0 + s.sag * 4 * t * (1 - t) + 5 * s.depth,
+          r: 2.2 * s.depth + .4,
+          depth: s.depth,
+          phase: Math.random() * Math.PI * 2,
+          speed: .4 + Math.random() * 1.1,
+          warm: Math.random() < .82, // mostly warm white, a few deeper amber
+        });
+      }
+    });
+  }
+
+  function drawLights(time) {
+    const w = lc.clientWidth, h = lc.clientHeight;
+    lx.clearRect(0, 0, w, h);
+    strands.forEach(s => {
+      lx.beginPath();
+      s.pts.forEach(([x, y], i) => i ? lx.lineTo(x, y) : lx.moveTo(x, y));
+      lx.strokeStyle = `rgba(40, 32, 22, ${.9 * s.depth})`;
+      lx.lineWidth = 1.1;
+      lx.stroke();
+    });
+    const t = time / 1000;
+    bulbs.forEach(b => {
+      const tw = reduce ? .85 : .55 + .45 * Math.pow(Math.sin(t * b.speed + b.phase) * .5 + .5, 2);
+      const a = tw * b.depth;
+      const col = b.warm ? '255, 214, 150' : '255, 170, 80';
+      const g = lx.createRadialGradient(b.x, b.y, 0, b.x, b.y, b.r * 7);
+      g.addColorStop(0, `rgba(${col}, ${.55 * a})`);
+      g.addColorStop(1, `rgba(${col}, 0)`);
+      lx.fillStyle = g;
+      lx.beginPath(); lx.arc(b.x, b.y, b.r * 7, 0, Math.PI * 2); lx.fill();
+      lx.fillStyle = `rgba(255, 244, 220, ${.35 + .65 * a})`;
+      lx.beginPath(); lx.arc(b.x, b.y, b.r, 0, Math.PI * 2); lx.fill();
+    });
+  }
+
+  /* ---- Dust drifting through the spotlight ---- */
+  const mc = document.getElementById('motes');
+  const mx = mc.getContext('2d');
+  let motes = [];
+
+  function buildMotes() {
+    const w = mc.clientWidth, h = mc.clientHeight;
+    mc.width = w * dpr; mc.height = h * dpr;
+    mx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    const count = w < 640 ? 34 : 60;
+    motes = Array.from({ length: count }, () => spawnMote(w, h, true));
+  }
+  function spawnMote(w, h, anywhere) {
+    // keep motes inside the cone of the beam
+    const y = anywhere ? Math.random() * h * .85 : -10;
+    const spread = (.06 + .24 * (y / h)) * Math.min(w * 1.5, 1100);
+    return {
+      x: w / 2 + (Math.random() * 2 - 1) * spread,
+      y, r: Math.random() * 1.3 + .3,
+      vy: Math.random() * .12 + .04,
+      vx: (Math.random() - .5) * .08,
+      a: Math.random() * .5 + .15,
+      p: Math.random() * Math.PI * 2,
+    };
+  }
+  function drawMotes(time) {
+    const w = mc.clientWidth, h = mc.clientHeight;
+    mx.clearRect(0, 0, w, h);
+    motes.forEach((m, i) => {
+      if (!reduce) {
+        m.y += m.vy; m.x += m.vx + Math.sin(time / 2400 + m.p) * .05;
+        if (m.y > h * .85) motes[i] = spawnMote(w, h, false);
+      }
+      const fade = Math.min(1, (h * .85 - m.y) / 120);
+      mx.fillStyle = `rgba(255, 228, 185, ${m.a * Math.max(0, fade)})`;
+      mx.beginPath(); mx.arc(m.x, m.y, m.r, 0, Math.PI * 2); mx.fill();
+    });
+  }
+
+  function frame(time) {
+    drawLights(time); drawMotes(time);
+    if (!reduce) requestAnimationFrame(frame);
+  }
+  function resize() { buildLights(); buildMotes(); if (reduce) frame(0); }
+  let rt; addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(resize, 120); });
+  resize();
+  if (!reduce) requestAnimationFrame(frame);
+
+  /* ---- Gentle reveal as sections scroll into view ---- */
+  const io = 'IntersectionObserver' in window && new IntersectionObserver(es => {
+    es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: .15 });
+  document.querySelectorAll('.reveal').forEach(el => io ? io.observe(el) : el.classList.add('in'));
+})();
+</script>
+</body>
+</html>
