@@ -105,6 +105,8 @@
   }
   .eyebrow .dot { color: var(--gold); padding: 0 .6em; }
   .eyebrow .nw { white-space: nowrap; }
+  .eyebrow a { color: inherit; text-decoration: none; }
+  .eyebrow a:hover { text-decoration: underline; text-underline-offset: 4px; }
 
   h1 {
     font-family: var(--serif);
@@ -238,6 +240,8 @@
     background: var(--paper);
     font-size: 12px; letter-spacing: .24em; text-transform: uppercase; color: var(--ink-faint);
   }
+  footer a { color: inherit; text-decoration: underline; text-decoration-color: var(--rule); text-underline-offset: 4px; }
+  footer a:hover { color: var(--ink); }
   footer .ah { display: block; font-family: var(--serif); font-style: italic; text-transform: none; letter-spacing: 0; font-size: 22px; color: var(--ink-soft); margin-bottom: 6px; }
 
   .reveal { opacity: 0; transform: translateY(14px); transition: opacity .9s ease, transform .9s ease; }
@@ -292,7 +296,7 @@
   <canvas id="motes" aria-hidden="true"></canvas>
 
   <div class="hero-inner">
-    <p class="eyebrow"><span class="nw">Bay Pines Lutheran</span><span class="dot">·</span><span class="nw">Christmas 2026</span></p>
+    <p class="eyebrow"><a class="nw" href="https://baypineslutheranchurch.org/">Bay Pines Lutheran</a><span class="dot">·</span><span class="nw">Christmas 2026</span></p>
     <h1>Adore Him</h1>
 
     <div class="manger-wrap" aria-hidden="true">
@@ -620,6 +624,7 @@
       <div class="actions">
         <a class="btn" href="https://maps.google.com/?q=Bay+Pines+Lutheran+Church,+7589+113th+Lane,+Seminole,+FL+33772" target="_blank" rel="noopener">Directions</a>
         <a class="btn" href="tel:+17273911810">727-391-1810</a>
+        <a class="btn" href="https://baypineslutheranchurch.org/">Church website</a>
       </div>
     </div>
   </section>
@@ -627,7 +632,7 @@
 
 <footer>
   <span class="ah">O come, let us adore Him</span>
-  Bay Pines Lutheran Church · Seminole, Florida
+  <a href="https://baypineslutheranchurch.org/">Bay Pines Lutheran Church</a> · Seminole, Florida
 </footer>
 
 <script>
